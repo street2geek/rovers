@@ -3,7 +3,7 @@
 
 This project was written using the Deno runtime in order to utilize TypeScript out of the box.
 
-cd into folder and run tests to see result.
+Cd into folder and run tests to log result.
 
 ### Prerequisites
 
