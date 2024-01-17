@@ -40,7 +40,7 @@ choco install deno
 
 1. Clone the repo
    ```sh
-   git clone [https://github.com/street2geek/rovers](https://github.com/street2geek/rovers)
+   git clone https://github.com/street2geek/rovers
    ```
 2. Run tests
    ```sh
