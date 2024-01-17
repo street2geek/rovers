@@ -44,7 +44,7 @@ choco install deno
    ```
 2. Run tests
    ```sh
-   deno test
+   deno test --allow-read
    ```
 3. Run app
    ```sh
