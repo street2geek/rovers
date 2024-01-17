@@ -10,3 +10,7 @@ export function init(input: string): string {
 
   return result;
 }
+
+const command = await Deno.readTextFile("./input.txt");
+
+init(command);
