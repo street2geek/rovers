@@ -46,3 +46,7 @@ choco install deno
    ```sh
    deno test
    ```
+3. Run app
+   ```sh
+   deno run -A main.ts
+   ```
