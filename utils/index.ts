@@ -75,9 +75,10 @@ export function navigateRovers(rovers: IRover[]): TPosition[] {
 
 /** Takes input string and returns an object with plateau bounds and an array of rovers */
 export function getInitialSettings(input: string): IMissionSettings {
+  const inputArray = input.split("\n");
   const initialSettings: IMissionSettings = {
-    plateauBounds: getPlateauBounds(input.split("\n")[0]),
-    rovers: buildRovers(input.split("\n").slice(1)),
+    plateauBounds: getPlateauBounds(inputArray[0]),
+    rovers: buildRovers(inputArray.slice(1)),
   };
 
   return initialSettings;
