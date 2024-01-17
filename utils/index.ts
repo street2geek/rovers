@@ -13,7 +13,7 @@ export function getPlateauBounds(line: string): TCoords {
   return { x: parseInt(x), y: parseInt(y) };
 }
 
-// Takes an array of strings and returns an array of rovers
+/** Takes an array of strings and returns an array of rovers */
 export function buildRovers(input: string[]): IRover[] {
   const rovers: Array<IRover> = [];
   for (let i = 0; i < input.length; i += 2) {
@@ -32,7 +32,7 @@ export function buildRovers(input: string[]): IRover[] {
   return rovers;
 }
 
-// Takes current position object and returns new position object with updated coordinates
+/** Takes current position object and returns new position object with updated coordinates */
 export function move(position: TPosition): TPosition {
   const { x, y, direction } = position;
   switch (direction) {
@@ -49,7 +49,7 @@ export function move(position: TPosition): TPosition {
   }
 }
 
-// Takes an array of rovers and returns an array of positions after navigation
+/** Takes an array of rovers and returns an array of positions after navigation */
 export function navigateRovers(rovers: IRover[]): TPosition[] {
   return rovers.map(({ position, instructions }) => {
     const instructionsArray = instructions.split("");
@@ -73,7 +73,7 @@ export function navigateRovers(rovers: IRover[]): TPosition[] {
   });
 }
 
-// Takes input string and returns an object with plateau bounds and an array of rovers
+/** Takes input string and returns an object with plateau bounds and an array of rovers */
 export function getInitialSettings(input: string): IMissionSettings {
   const initialSettings: IMissionSettings = {
     plateauBounds: getPlateauBounds(input.split("\n")[0]),
@@ -83,7 +83,7 @@ export function getInitialSettings(input: string): IMissionSettings {
   return initialSettings;
 }
 
-// Takes an array of positions and returns a string of final positions
+/** Takes an array of positions and returns a string of final positions */
 export function processResult(
   roverPositions: TPosition[],
   plateauBounds: TCoords
