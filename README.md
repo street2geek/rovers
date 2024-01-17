@@ -1,11 +1,10 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This project was written using the Deno runtime in order to utilize TypeScript out of the box.
+This project was written using the Deno runtime in order to utilize TypeScript out of the box,
+cd into folder and run tests to see result.
 
 ### Prerequisites
-
-## Installation
 
 Install the Deno runtime on your system using one of the commands below. Note
 that there are a number of ways to install Deno - a comprehensive list of

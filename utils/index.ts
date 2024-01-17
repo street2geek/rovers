@@ -32,7 +32,7 @@ export function buildRovers(input: string[]): IRover[] {
   return rovers;
 }
 
-// Takes current position and returns updated position after moving coordinates
+// Takes current position object and returns new position object with updated coordinates
 export function move(position: TPosition): TPosition {
   const { x, y, direction } = position;
   switch (direction) {
