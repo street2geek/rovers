@@ -1,7 +1,8 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This project was written using the Deno runtime in order to utilize TypeScript out of the box,
+This project was written using the Deno runtime in order to utilize TypeScript out of the box.
+
 cd into folder and run tests to see result.
 
 ### Prerequisites
