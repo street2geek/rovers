@@ -55,7 +55,7 @@ export function navigateRovers(rovers: IRover[]): TPosition[] {
     const instructionsArray = instructions.split("");
     let newPosition = { ...position };
 
-    instructionsArray.forEach((instruction) => {
+    for (const instruction of instructionsArray) {
       if (instruction === Instruction.M) {
         newPosition = move(newPosition);
       } else if (
@@ -67,7 +67,7 @@ export function navigateRovers(rovers: IRover[]): TPosition[] {
       } else {
         throw new Error("Invalid instruction");
       }
-    });
+    }
 
     return newPosition;
   });
