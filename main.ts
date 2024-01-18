@@ -1,6 +1,6 @@
 import { IMissionSettings } from "./utils/types.ts";
 import { getInitialSettings, processResult } from "./utils/index.ts";
-import { navigateRovers } from "./utils/index.ts";
+import { navigateRovers, feedInput } from "./utils/index.ts";
 
 export function init(input: string): string {
   const { plateauBounds, rovers }: IMissionSettings = getInitialSettings(input);
@@ -11,6 +11,4 @@ export function init(input: string): string {
   return result;
 }
 
-const command = await Deno.readTextFile("./input.txt");
-
-init(command);
+init(await feedInput());
