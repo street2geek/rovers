@@ -6,7 +6,7 @@ import {
   navigateRovers,
 } from "./utils/index.ts";
 
-export function init(input: string): string {
+export function main(input: string): string {
   const { plateauBounds, rovers }: IMissionSettings = getInitialSettings(input);
   const roverPositions = navigateRovers(rovers);
   const result = processResult(roverPositions, plateauBounds);
@@ -15,4 +15,4 @@ export function init(input: string): string {
   return result;
 }
 
-init(await feedInput());
+main(await feedInput());
