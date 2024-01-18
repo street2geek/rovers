@@ -11,19 +11,21 @@ export enum Instruction {
   M = "M",
 }
 
-export type TPosition = { x: number; y: number; direction: Direction };
-
-export type TCoords = {
+export interface ICoords {
   x: number;
   y: number;
-};
+}
+
+export interface IPosition extends ICoords {
+  direction: Direction;
+}
 
 export interface IRover {
-  position: TPosition;
+  position: IPosition;
   instructions: string;
 }
 
 export interface IMissionSettings {
-  plateauBounds: TCoords;
+  plateauBounds: ICoords;
   rovers: Array<IRover>;
 }

@@ -1,6 +1,6 @@
 import {
-  TCoords,
-  TPosition,
+  ICoords,
+  IPosition,
   IMissionSettings,
   IRover,
   Direction,
@@ -8,7 +8,7 @@ import {
 } from "./types.ts";
 import { directionMap } from "./maps.ts";
 
-export function getPlateauBounds(line: string): TCoords {
+export function getPlateauBounds(line: string): ICoords {
   const [x, y] = line.split(" ");
   return { x: parseInt(x), y: parseInt(y) };
 }
@@ -33,7 +33,7 @@ export function buildRovers(input: string[]): IRover[] {
 }
 
 /** Takes current position object and returns new position object with updated coordinates */
-export function move(position: TPosition): TPosition {
+export function move(position: IPosition): IPosition {
   const { x, y, direction } = position;
   switch (direction) {
     case Direction.N:
@@ -50,7 +50,7 @@ export function move(position: TPosition): TPosition {
 }
 
 /** Takes an array of rovers and returns an array of positions after navigation */
-export function navigateRovers(rovers: IRover[]): TPosition[] {
+export function navigateRovers(rovers: IRover[]): IPosition[] {
   return rovers.map(({ position, instructions }) => {
     const instructionsArray = instructions.split("");
     let newPosition = { ...position };
@@ -86,8 +86,8 @@ export function getInitialSettings(input: string): IMissionSettings {
 
 /** Takes an array of positions and returns a string of final positions */
 export function processResult(
-  roverPositions: TPosition[],
-  plateauBounds: TCoords
+  roverPositions: IPosition[],
+  plateauBounds: ICoords
 ): string {
   const stringifiedPositions = roverPositions.map((position) => {
     const { x, y, direction } = position;
