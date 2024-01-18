@@ -49,7 +49,7 @@ export function move(position: IPosition): IPosition {
   }
 }
 
-/** Takes an array of rovers and returns an array of positions after navigation */
+/** Takes an array of rovers and returns an array of positions post navigation */
 export function navigateRovers(rovers: IRover[]): IPosition[] {
   return rovers.map(({ position, instructions }) => {
     const instructionsArray = instructions.split("");
