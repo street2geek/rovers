@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.212.0/assert/mod.ts";
+import { assertEquals, assertThrows } from "../deps.ts";
 import {
   buildRovers,
   getInitialSettings,
@@ -7,7 +7,6 @@ import {
   processResult,
 } from "./index.ts";
 import { Direction } from "./types.ts";
-import { assertThrows } from "https://deno.land/std@0.212.0/assert/assert_throws.ts";
 
 const mockInitialSettings = {
   plateauBounds: { x: 5, y: 5 },
