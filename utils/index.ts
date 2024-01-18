@@ -9,7 +9,7 @@ import {
 import { directionMap } from "./maps.ts";
 
 export function getPlateauBounds(line: string): ICoords {
-  const [x, y] = line.split(" ");
+  const [x, y] = line.trim().split(" ");
   return { x: parseInt(x), y: parseInt(y) };
 }
 
@@ -32,7 +32,7 @@ export function buildRovers(input: string[]): IRover[] {
   return rovers;
 }
 
-// TODO? Could add to the map (jump table vs object creation/lookup) 
+// TODO? Could add to the map (jump table vs object creation/lookup)
 /** Takes current position object and returns new position object with updated coordinates */
 export function move(position: IPosition): IPosition {
   const { x, y, direction } = position;
