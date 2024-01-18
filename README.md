@@ -1,4 +1,5 @@
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 This project was written using the Deno runtime in order to utilize TypeScript out of the box.
@@ -16,24 +17,6 @@ Shell (Mac, Linux):
 
 ```sh
 curl -fsSL https://deno.land/install.sh | sh
-```
-
-PowerShell (Windows):
-
-```powershell
-irm https://deno.land/install.ps1 | iex
-```
-
-[Homebrew](https://formulae.brew.sh/formula/deno) (Mac):
-
-```sh
-brew install deno
-```
-
-[Chocolatey](https://chocolatey.org/packages/deno) (Windows):
-
-```powershell
-choco install deno
 ```
 
 ### Run Program
