@@ -1,9 +1,9 @@
 import { IMissionSettings } from "./utils/types.ts";
+import { feedInput } from "./utils/io.ts";
 import {
   getInitialSettings,
   processResult,
   navigateRovers,
-  feedInput,
 } from "./utils/index.ts";
 
 export function init(input: string): string {
