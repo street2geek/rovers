@@ -1,4 +1,4 @@
-import { assertEquals, assertThrows } from "../deps.ts";
+import { assertEquals, assertThrows } from "../dev_deps.ts";
 import {
   buildRovers,
   getInitialSettings,
