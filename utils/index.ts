@@ -13,7 +13,7 @@ export function getPlateauBounds(line: string): ICoords {
   return { x: parseInt(x), y: parseInt(y) };
 }
 
-/** Takes an array of strings and returns an array of rovers */
+/** Takes an array of strings and returns an array of rover objects */
 export function buildRovers(input: string[]): IRover[] {
   const rovers: Array<IRover> = [];
   for (let i = 0; i < input.length; i += 2) {
