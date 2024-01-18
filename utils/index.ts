@@ -34,7 +34,7 @@ export function buildRovers(input: string[]): IRover[] {
 
 /** 
   * Takes current position object and returns new position object with updated coordinates
-  * TODO? Could add to the map 
+  * TODO? Could add to the map (jump table vs object creation/lookup) 
   */
 export function move(position: IPosition): IPosition {
   const { x, y, direction } = position;
