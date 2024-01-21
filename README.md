@@ -3,6 +3,7 @@
 ## Getting Started
 
 This example was written using the Deno runtime in order to utilize TypeScript out of the box.
+(may display lint errors within your ide/editor without deno language server plugin)
 
 Cd into folder and run tests to log result.
 
