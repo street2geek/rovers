@@ -15,4 +15,5 @@ export function main(input: string): string {
   return result;
 }
 
+// Top level await: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-8.html#top-level-await
 main(await feedInput());
