@@ -2,7 +2,7 @@ import { assertEquals, assertThrows } from "../dev_deps.ts";
 import {
   buildRovers,
   getInitialSettings,
-  move,
+  movePosition,
   navigateRovers,
   processResult,
 } from "./index.ts";
@@ -55,22 +55,22 @@ Deno.test("navigateRovers() utils function error handling", () => {
 });
 
 Deno.test("move() utils function logic", () => {
-  assertEquals(move({ x: 1, y: 3, direction: Direction.N }), {
+  assertEquals(movePosition({ x: 1, y: 3, direction: Direction.N }), {
     x: 1,
     y: 4,
     direction: Direction.N,
   });
-  assertEquals(move({ x: 1, y: 3, direction: Direction.S }), {
+  assertEquals(movePosition({ x: 1, y: 3, direction: Direction.S }), {
     x: 1,
     y: 2,
     direction: Direction.S,
   });
-  assertEquals(move({ x: 1, y: 3, direction: Direction.E }), {
+  assertEquals(movePosition({ x: 1, y: 3, direction: Direction.E }), {
     x: 2,
     y: 3,
     direction: Direction.E,
   });
-  assertEquals(move({ x: 1, y: 3, direction: Direction.W }), {
+  assertEquals(movePosition({ x: 1, y: 3, direction: Direction.W }), {
     x: 0,
     y: 3,
     direction: Direction.W,
@@ -79,7 +79,7 @@ Deno.test("move() utils function logic", () => {
 
 Deno.test("move() utils function error handling", () => {
   assertThrows(
-    () => move({ x: 1, y: 3, direction: "X" as Direction }),
+    () => movePosition({ x: 1, y: 3, direction: "X" as Direction }),
     Error,
     "Invalid direction"
   );
